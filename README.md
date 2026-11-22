@@ -35,3 +35,7 @@ jupyter notebook baseline_model.ipynb
 ## Notes
 - The test set is small, so one mistake shifts accuracy by about 0.9 points. Treat 0.98 as approximate.
 - Next steps: cross-validation, other models, and recall on the malignant class.
+## Decisions
+- Stratified split: keeps the malignant/benign ratio the same in train and test.
+- Scaler inside a pipeline: stops test data from leaking into preprocessing.
+- Logistic Regression: the simplest strong model for this data, which keeps the baseline easy to explain.
